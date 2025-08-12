@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./app/css/styles.css" />
+    <title>Biblioteca</title>
+</head>
+
+<body class="p-4">
+    <h1 class="title">Gestión de Préstamos</h1>
+
+    <!-- Formulario -->
+    <form id="prestamoForm" class="form">
+        <input type="hidden" id="id_prestamo" />
+
+        <div class="form-row">
+            <input type="number" id="id_usuario" placeholder="ID Usuario" required />
+            <input type="text" id="isbn" placeholder="ISBN" required />
+            <input type="date" id="fecha_prestamo" required />
+            <input type="date" id="fecha_devolucion" required />
+            <select id="estado" required>
+                <option value="">Estado</option>
+                <option value="activo">Activo</option>
+                <option value="devuelto">Devuelto</option>
+                <option value="retrasado">Retrasado</option>
+            </select>
+            <button type="submit" class="btn">Guardar</button>
+        </div>
+    </form>
+
+    <!-- Tabla -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Libro</th>
+                <th>Fecha Préstamo</th>
+                <th>Fecha Devolución</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPrestamos">
+            <!-- Datos dinámicos -->
+        </tbody>
+    </table>
+
+    <script type="module" src="./app/js/main.js"></script>
+</body>
+
+</html>
